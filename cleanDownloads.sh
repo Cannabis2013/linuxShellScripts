@@ -7,6 +7,11 @@ arg=$1
 basePath="/home/mh"
 downloadPath="${basePath}/Hentet"
 
+if [ ! -d $downloadPath ]; then
+	echo "No directory found"
+	exit
+fi
+
 if [[ arg == "-help" ]]; then
 	printf "Sletter alt i \"$downloadPath\""
 	exit 1

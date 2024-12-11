@@ -34,7 +34,7 @@ if [ -z "$file" ]; then
     exit
 fi
 
-nasm -gdwarf -f elf $file
+nasm -f elf $file
 
 if [ ! -s $binaryName.o ]; then
     exit
