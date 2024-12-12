@@ -40,7 +40,7 @@ if [ ! -s $binaryName.o ]; then
     exit
 fi
 
-ld -m elf_i386 -s -o $binary_name *.o
+ld -m elf_i386 -s -o $binary_name $binaryName.o
 ./"$binary_name"
 
 if [ $cleanup -gt 0 ]; then
