@@ -3,7 +3,11 @@ FILE=$1
 MODE=$2
 FILE2=$3
 
-if [ ! -e $FILE ]; then
+
+if [ -z $FILE ];then
+    echo "No file provided"
+    return
+elif [ ! -e $FILE ]; then
     echo "No such file as $FILE in current directory"
     return
 fi
